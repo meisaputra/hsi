@@ -10,7 +10,7 @@ class SigninModel extends CI_Model{
 		# code...
 	}
 
-	public function getUser($form_data = [] ){
+	public function getUser( $form_data = array() ){
 
 		$username = $form_data['username'];
 		$password = md5($form_data['password']);

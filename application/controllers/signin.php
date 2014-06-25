@@ -2,7 +2,7 @@
 
 class Signin extends CI_Controller {
 
-   	public function index($data = []){
+   	public function index($data = array()){
 
 	    $this->load->view('header');
 		$this->load->view('pages/signin/signin', $data);
