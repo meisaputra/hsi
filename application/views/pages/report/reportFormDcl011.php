@@ -1,10 +1,6 @@
 <div class="container">
-
-	Wellcome <?php print_r($userdata); ?>
-
-</div> <!-- /container -->
-
-
+	<h1> No script</h1>
+</div>
 
 <!-- Bootstrap core JavaScript
 ================================================== -->
@@ -15,8 +11,3 @@
 <script src="<?php echo base_url('assets/vendor/jqwidgets/jqxcore.js') ?>"></script>
 <!-- ================================================== -->
 <!-- Add addition JavaScript files here -->
-<script type="text/javascript">
-	$(document).ready(function () {
-	// your JavaScript code here.
-	});
-</script>
