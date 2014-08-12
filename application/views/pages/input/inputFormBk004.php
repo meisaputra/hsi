@@ -1,63 +1,89 @@
 <div class="container">
-	<div class="panel panel-default">
-	<div class="panel-heading">
-		<h3>004 BK</h3>
-	</div><BR/>
+    <div class="row">
+		<div class="col-md-12">
+			<h3>004 BK</h3>
 			<center><h3>Blanko Susun Item/Lori</h3></center>
-	<form class="form-horizontal">
-		<table class="table">
-			<tr>
-				<td>
-					<div class="form-group">
-						<label for="Tanggal" class="col-xs-4 control-label">Tanggal</label>
-						<div class="col-xs-4">
-							<input type="text" class="form-control" id="tanggal" placeholder="Tanggal">
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="BK" class="col-xs-4 control-label">BK</label>
-						<div class="col-xs-4">
-							<input type="text" class="form-control" id="bk" placeholder="BK">
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="Item" class="col-xs-4 control-label">Item</label>
-						<div class="col-xs-4">
-							<input type="text" class="form-control" id="item" placeholder="Item">
-						</div>
-					</div>
-				</td>
-				<td>
-					<div class="form-group">
-						<label for="No. Lori" class="col-xs-4 control-label">No. Lori</label>
-						<div class="col-xs-4">
-							<input type="text" class="form-control" id="no_lori" placeholder="No. Lori">
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="Jam Masuk" class="col-xs-4 control-label">Jam Masuk</label>
-						<div class="col-xs-4">
-							<input type="text" class="form-control" id="jam_masuk" placeholder="Jam Masuk">
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="Pcs" class="col-xs-4 control-label">Pcs</label>
-						<div class="col-xs-4">
-							<input type="text" class="form-control" id="pcs" placeholder="Pcs">
-						</div>
-					</div>
-				</td>
-			</tr>
-		</table>
-		<div class="form-group">
-			<div class="col-xs-offset-4 col-xs-7">
-				<button type="submit" class="btn btn-success">Simpan</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<button type="submit" class="btn btn-success">&nbsp;&nbsp;Batal&nbsp;&nbsp;</button>
-			</div>
+			<form action="<?php echo base_url('action/insertForm004Bk'); ?>"method="post">
+			<button type="submit" class="btn btn-primary">Save</button>
+			<hr>
+			<table class="table table-hover" id="tab_logic">
+				<thead>
+					
+					<tr >
+						<th class="text-center">
+							Date
+						</th>
+						<th class="text-center">
+							BK
+						</th>
+						<th class="text-center">
+							Item
+						</th>
+						<th class="text-center">
+							Lorry
+						</th>
+						<th class="text-center">
+							In
+						</th>
+						<th class="text-center">
+							Pcs
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr id='addr0'>
+						<td>
+						<input type="text" name='date[]'  placeholder='Date' class="form-control input-sm"/>
+						</td>
+						<td>
+						<input type="text" name='bk[]' placeholder='BK' class="form-control input-sm"/>
+						</td>
+						<td>
+						<input type="text" name='item[]' placeholder='Item' class="form-control input-sm"/>
+						</td>
+						<td>
+						<input type="text" name='lorry[]' placeholder='Lorry' class="form-control input-sm"/>
+						</td>
+						<td>
+						<input type="text" name='in[]' placeholder='In' class="form-control input-sm"/>
+						</td>
+						<td>
+						<input type="text" name='pcs[]' placeholder='Psc' class="form-control input-sm"/>
+						</td>
+						
+					</tr>
+                    <tr id='addr1'></tr>
+				</tbody>
+				<tfoot>
+					<tr >
+						<td class="text-center">
+							<a id="add_row" class="btn btn-default btn-sm pull-left">Add Row</a>
+						</td>
+						<td>
+							
+						</td>
+						<td>
+							
+						</td>
+						<td>
+							
+						</td>
+						<td>
+							
+						</td>
+						<td>
+							<a id='delete_row' class="btn btn-default btn-sm pull-right">Delete Row</a>
+						</td>
+					</tr>
+				</tfoot>
+			</table>
+			</form>
 		</div>
-	</form>
 	</div>
+	
 </div>
+
+
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
@@ -67,8 +93,44 @@
 <script src="<?php echo base_url('assets/vendor/jqwidgets/jqxcore.js') ?>"></script>
 <!-- ================================================== -->
 <!-- Add addition JavaScript files here -->
+
 <script type="text/javascript">
-	$(document).ready(function () {
-	// your JavaScript code here.
+
+$(document).ready(function(){
+
+	var i=1;
+	var content = "";
+
+	$("#add_row").click(function(){
+
+		// content = 	"<td><input type='text' name='date_"+i+"'  placeholder='Date' class='form-control input-sm'/></td>"+
+		// 			"<td><input type='text' name='bk_"+i+"' placeholder='BK' class='form-control input-sm'/></td>"+
+		// 			"<td><input type='text' name='item_"+i+"' placeholder='Item' class='form-control input-sm'/></td>"+
+		// 			"<td><input type='text' name='lorry_"+i+"' placeholder='Lorry' class='form-control input-sm'/></td>"+
+		// 			"<td><input type='text' name='in_"+i+"' placeholder='In' class='form-control input-sm'/></td>"+
+		// 			"<td><input type='text' name='pcs_"+i+"' placeholder='Psc' class='form-control input-sm'/></td>";
+
+		content = 	"<td><input type='text' name='date[]'  placeholder='Date' class='form-control input-sm'/></td>"+
+					"<td><input type='text' name='bk[]' placeholder='BK' class='form-control input-sm'/></td>"+
+					"<td><input type='text' name='item[]' placeholder='Item' class='form-control input-sm'/></td>"+
+					"<td><input type='text' name='lorry[]' placeholder='Lorry' class='form-control input-sm'/></td>"+
+					"<td><input type='text' name='in[]' placeholder='In' class='form-control input-sm'/></td>"+
+					"<td><input type='text' name='pcs[]' placeholder='Psc' class='form-control input-sm'/></td>";
+
+		$('#addr'+i).html(content);
+
+		$('#tab_logic').append('<tr id="addr'+(i+1)+'"></tr>');
+
+		i++; 
+
 	});
-</script>                              		
+
+	$("#delete_row").click(function(){
+		if(i>1){
+			$("#addr"+(i-1)).html('');
+			i--;
+		}
+	});
+});
+
+</script>

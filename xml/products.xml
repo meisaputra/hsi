@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Products>
+  <Product ID="1">
+    <defect_code>Ching</defect_code>
+    <defect_area>1200</defect_area>
+    
+    <defect_name>100</defect_name>
+    <form_name>100</form_name>
+  </Product>
+  <Product ID="2">
+    <defect_code>Chang</defect_code>
+    <defect_area>1500</defect_area>
+    
+    <defect_name>100</defect_name>
+    <form_name>100</form_name>
+  </Product>
+  <Product ID="3">
+    <defect_code>Ching</defect_code>
+    <defect_area>1200</defect_area>
+    
+    <defect_name>100</defect_name>
+    <form_name>100</form_name>
+  </Product>
+  <Product ID="4">
+    <defect_code>Chang</defect_code>
+    <defect_area>1500</defect_area>
+    
+    <defect_name>100</defect_name>
+    <form_name>100</form_name>
+  </Product>
+  <Product ID="5">
+    <defect_code>Ching</defect_code>
+    <defect_area>1200</defect_area>
+    
+    <defect_name>100</defect_name>
+    <form_name>100</form_name>
+  </Product>
+  <Product ID="6">
+    <defect_code>Chang</defect_code>
+    <defect_area>1500</defect_area>
+    
+    <defect_name>100</defect_name>
+    <form_name>100</form_name>
+  </Product>
+</Products>

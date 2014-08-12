@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Products>
+  <Product ID="1">
+  	<Nama_Produk>Wring</Nama_Produk>
+  	<J_GYP>10</J_GYP>
+  	<PMK>10</PMK>
+  	<PRT>10</PRT>
+  </Product>
+  <Product ID="2">
+  	<Nama_Produk>Wrong</Nama_Produk>
+  	<J_GYP>10</J_GYP>
+  	<PMK>10</PMK>
+  	<PRT>10</PRT>
+  </Product>
+  <Product ID="3">
+  	<Nama_Produk>Wring</Nama_Produk>
+  	<J_GYP>10</J_GYP>
+  	<PMK>10</PMK>
+  	<PRT>10</PRT>
+  </Product>
+  <Product ID="4">
+  	<Nama_Produk>Wrong</Nama_Produk>
+  	<J_GYP>10</J_GYP>
+  	<PMK>10</PMK>
+  	<PRT>10</PRT>
+  </Product>
+  <Product ID="5">
+  	<Nama_Produk>Wring</Nama_Produk>
+  	<J_GYP>10</J_GYP>
+  	<PMK>10</PMK>
+  	<PRT>10</PRT>
+  </Product>
+  <Product ID="6">
+  	<Nama_Produk>Wrong</Nama_Produk>
+  	<J_GYP>10</J_GYP>
+  	<PMK>10</PMK>
+  	<PRT>10</PRT>
+  </Product>
+</Products>

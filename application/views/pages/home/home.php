@@ -1,6 +1,6 @@
 <div class="container">
 
-	Wellcome <?php print_r($userdata); ?>
+	Selamat Datang <?php //print_r($userdata); ?>
 
 </div> <!-- /container -->
 
